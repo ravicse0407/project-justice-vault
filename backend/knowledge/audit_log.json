@@ -1,0 +1,495 @@
+[
+  {
+    "audit_id": "AUD-1789232342278",
+    "timestamp": "2026-09-12 22:29:02",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "DOCUMENT_UPLOAD_AND_INDEX",
+    "query": null,
+    "retrieved_source_ids": [
+      "DOC-USER-1789232342"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": false,
+    "details": {
+      "filename": "citizen_income_certificate_2026.txt",
+      "sha256": "97784253bff4dafaea54eb944cb409b97e5ef4113df4e4bd2c58ca049dd28198",
+      "ocr_applied": false,
+      "category": "Housing & Urban Development (PMAY-U Eligible Artifact)"
+    }
+  },
+  {
+    "audit_id": "AUD-1789232313221",
+    "timestamp": "2026-09-12 22:28:33",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What documents do I need for PM Awas Yojana?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 4.6,
+      "language": "hi"
+    }
+  },
+  {
+    "audit_id": "AUD-1789232307584",
+    "timestamp": "2026-09-12 22:28:27",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "\u092a\u094d\u0930\u0927\u093e\u0928\u092e\u0902\u0924\u094d\u0930\u0940 \u0906\u0935\u093e\u0938 \u092f\u094b\u091c\u0928\u093e \u0915\u0947 \u0932\u093f\u090f \u0915\u094d\u092f\u093e \u0928\u093f\u092f\u092e \u0939\u0948\u0902?",
+    "retrieved_source_ids": [],
+    "confidence": "LOW",
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 0,
+      "processing_time_ms": 7.96,
+      "language": "hi"
+    }
+  },
+  {
+    "audit_id": "AUD-1789232300308",
+    "timestamp": "2026-09-12 22:28:20",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "Can I use manual migration slips for One Nation One Ration Card?",
+    "retrieved_source_ids": [
+      "DOC-ONORC-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "MEDIUM",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 10.1,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789232300292",
+    "timestamp": "2026-09-12 22:28:20",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What is the deadline for the scholarship application?",
+    "retrieved_source_ids": [
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-STATE-2026"
+    ],
+    "confidence": "LOW",
+    "conflict_detected": true,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 2,
+      "processing_time_ms": 4.73,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789232300280",
+    "timestamp": "2026-09-12 22:28:20",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What documents do I need for PM Awas Yojana and what is the income limit?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 9.99,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231704631",
+    "timestamp": "2026-09-12 22:18:24",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "OFFICIAL_ROUTE_CONFIRMED",
+    "query": "PMAY-U 2.0",
+    "retrieved_source_ids": [],
+    "confidence": null,
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": true,
+    "details": {
+      "confirmation_id": "CONF-1789231704631",
+      "target_portal": "https://pmay-urban.gov.in/",
+      "notice": "Client-side explicit routing confirmation verified."
+    }
+  },
+  {
+    "audit_id": "AUD-1789231704621",
+    "timestamp": "2026-09-12 22:18:24",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "How do I register an interstellar spaceship with the municipal corporation?",
+    "retrieved_source_ids": [],
+    "confidence": "LOW",
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 0,
+      "processing_time_ms": 6.58,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231704608",
+    "timestamp": "2026-09-12 22:18:24",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "Can I use manual migration slips for One Nation One Ration Card?",
+    "retrieved_source_ids": [
+      "DOC-ONORC-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "MEDIUM",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 7.43,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231704594",
+    "timestamp": "2026-09-12 22:18:24",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What is the deadline for the scholarship application?",
+    "retrieved_source_ids": [
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-STATE-2026"
+    ],
+    "confidence": "LOW",
+    "conflict_detected": true,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 2,
+      "processing_time_ms": 4.6,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231704583",
+    "timestamp": "2026-09-12 22:18:24",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What documents do I need for PM Awas Yojana and what is the income limit?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 6.0,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231670552",
+    "timestamp": "2026-09-12 22:17:50",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "How do I register an interstellar spaceship with the municipal corporation?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-ONORC-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 0.95,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231663311",
+    "timestamp": "2026-09-12 22:17:43",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "OFFICIAL_ROUTE_CONFIRMED",
+    "query": "PMAY-U 2.0",
+    "retrieved_source_ids": [],
+    "confidence": null,
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": true,
+    "details": {
+      "confirmation_id": "CONF-1789231663311",
+      "target_portal": "https://pmay-urban.gov.in/",
+      "notice": "Client-side explicit routing confirmation verified."
+    }
+  },
+  {
+    "audit_id": "AUD-1789231663189",
+    "timestamp": "2026-09-12 22:17:43",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "How do I register an interstellar spaceship with the municipal corporation?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-ONORC-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 0.79,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231663165",
+    "timestamp": "2026-09-12 22:17:43",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "Can I use manual migration slips for One Nation One Ration Card?",
+    "retrieved_source_ids": [
+      "DOC-ONORC-2026",
+      "DOC-ONORC-2024",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "MEDIUM",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 4,
+      "processing_time_ms": 0.61,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231663160",
+    "timestamp": "2026-09-12 22:17:43",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What is the deadline for the scholarship application?",
+    "retrieved_source_ids": [
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-STATE-2026",
+      "DOC-PMAY-U2-2026"
+    ],
+    "confidence": "LOW",
+    "conflict_detected": true,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 2,
+      "processing_time_ms": 0.61,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231663153",
+    "timestamp": "2026-09-12 22:17:43",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What documents do I need for PM Awas Yojana and what is the income limit?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026",
+      "DOC-PMAY-U2-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 1.82,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231617902",
+    "timestamp": "2026-09-12 22:16:57",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "OFFICIAL_ROUTE_CONFIRMED",
+    "query": "PMAY-U 2.0",
+    "retrieved_source_ids": [],
+    "confidence": null,
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": true,
+    "details": {
+      "confirmation_id": "CONF-1789231617902",
+      "target_portal": "https://pmay-urban.gov.in/",
+      "notice": "Client-side explicit routing confirmation verified."
+    }
+  },
+  {
+    "audit_id": "AUD-1789231617816",
+    "timestamp": "2026-09-12 22:16:57",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "How do I register an interstellar spaceship with the municipal corporation?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-ONORC-2024",
+      "DOC-ONORC-2026"
+    ],
+    "confidence": "MEDIUM",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 4,
+      "processing_time_ms": 0.62,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231617811",
+    "timestamp": "2026-09-12 22:16:57",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "Can I use manual migration slips for One Nation One Ration Card?",
+    "retrieved_source_ids": [
+      "DOC-ONORC-2026",
+      "DOC-ONORC-2024",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "MEDIUM",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 4,
+      "processing_time_ms": 0.62,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231617806",
+    "timestamp": "2026-09-12 22:16:57",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What is the deadline for the scholarship application?",
+    "retrieved_source_ids": [
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-SCHOLARSHIP-STATE-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026"
+    ],
+    "confidence": "LOW",
+    "conflict_detected": true,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 2,
+      "processing_time_ms": 0.72,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231617801",
+    "timestamp": "2026-09-12 22:16:57",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "What documents do I need for PM Awas Yojana and what is the income limit?",
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-PMAY-U2-2026",
+      "DOC-PMJAY-70PLUS-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "details": {
+      "claims_count": 3,
+      "processing_time_ms": 0.86,
+      "language": "en"
+    }
+  },
+  {
+    "audit_id": "AUD-1789231617766",
+    "timestamp": "2026-09-12 22:16:57",
+    "user_id": "SYSTEM_BOOT",
+    "role": "auditor",
+    "event_type": "VAULT_INITIALIZATION",
+    "query": null,
+    "retrieved_source_ids": [
+      "DOC-PMAY-U2-2026",
+      "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "DOC-ONORC-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": false,
+    "external_action_confirmed": false,
+    "details": {
+      "message": "Justice Vault initialized with 7 verified official seed standards."
+    }
+  }
+]
