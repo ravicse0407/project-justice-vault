@@ -24,13 +24,20 @@ class BenchmarkRunner:
         self._load_saved()
 
     def _load_saved(self):
-        if self.benchmark_file.exists():
+        candidate_paths = [
+            self.benchmark_file,
+            Path(__file__).resolve().parent.parent.parent / "backend" / "knowledge" / "latest_benchmark.json",
+            Path(__file__).resolve().parent.parent / "knowledge" / "latest_benchmark.json",
+            Path("/var/task/backend/knowledge/latest_benchmark.json")
+        ]
+        target_path = next((p for p in candidate_paths if p.exists()), None)
+        if target_path:
             try:
-                with open(self.benchmark_file, "r", encoding="utf-8") as f:
+                with open(target_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     self._latest_metrics = [BenchmarkMetric(**m) for m in data.get("metrics", [])]
             except Exception as e:
-                print(f"Error loading benchmark file: {e}")
+                print(f"Error loading benchmark file from {target_path}: {e}")
 
     def get_latest_metrics(self) -> List[BenchmarkMetric]:
         if not self._latest_metrics:

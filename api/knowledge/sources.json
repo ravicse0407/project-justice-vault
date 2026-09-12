@@ -1,0 +1,226 @@
+[
+  {
+    "id": "DOC-PMAY-U2-2026",
+    "title": "Pradhan Mantri Awas Yojana - Urban 2.0 (PMAY-U 2.0) Implementation Guidelines",
+    "issuer": "Ministry of Housing and Urban Affairs (MoHUA), Government of India",
+    "category": "Housing & Urban Development",
+    "url": "https://pmay-urban.gov.in/",
+    "version": "2026.1",
+    "publication_date": "2026-08-15",
+    "effective_date": "2026-09-01",
+    "expiry_date": "2029-03-31",
+    "status": "CURRENT",
+    "supersedes_doc_id": null,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Official operational guidelines for PMAY-U 2.0 defining income eligibility bands (EWS, LIG, MIG), mandatory documentation, and online application routing.",
+    "sections": [
+      {
+        "section_id": "SEC-PMAY-01",
+        "title": "Income Eligibility & Beneficiary Categories",
+        "page": 4,
+        "text": "Under PMAY-U 2.0, eligible beneficiary families are categorized into three income brackets: (1) Economically Weaker Section (EWS) with annual household income up to ₹3,00,000; (2) Low Income Group (LIG) with annual household income between ₹3,00,001 and ₹6,00,000; (3) Middle Income Group (MIG) with annual household income between ₹6,00,001 and ₹9,00,000. The beneficiary family must not own a pucca house in their name or in the name of any member of their family anywhere in India."
+      },
+      {
+        "section_id": "SEC-PMAY-02",
+        "title": "Mandatory Required Documents",
+        "page": 7,
+        "text": "To register for PMAY-U 2.0, the applicant must submit: (a) Aadhaar Card of all family members with biometric/OTP authentication; (b) Certified Income Certificate issued by the designated Tehsildar or competent revenue authority; (c) Land title deed, patta, or valid possession document; (d) Aadhaar-seeded active bank account passbook; (e) Notarized self-declaration affidavit affirming non-ownership of any residential pucca house across India."
+      },
+      {
+        "section_id": "SEC-PMAY-03",
+        "title": "Application Route and Submission Channel",
+        "page": 11,
+        "text": "All citizen applications must be submitted exclusively through the official Ministry portal at https://pmay-urban.gov.in/ or through authorized Common Service Centres (CSCs). No physical submission at non-designated offices or private agents is authorized."
+      }
+    ]
+  },
+  {
+    "id": "DOC-SCHOLARSHIP-CENTRAL-2026",
+    "title": "National Scholarship Portal - Post-Matric Scholarship Scheme for SC/ST/OBC Students (AY 2026-27)",
+    "issuer": "Ministry of Social Justice and Empowerment, Government of India",
+    "category": "Education & Social Justice",
+    "url": "https://scholarships.gov.in/",
+    "version": "2026.04",
+    "publication_date": "2026-07-20",
+    "effective_date": "2026-08-01",
+    "expiry_date": "2026-12-31",
+    "status": "CURRENT",
+    "supersedes_doc_id": null,
+    "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Central guidelines prescribing student application timeline and verification milestones on the National Scholarship Portal (NSP).",
+    "sections": [
+      {
+        "section_id": "SEC-SCHOL-CENTRAL-01",
+        "title": "Central Application Deadline",
+        "page": 2,
+        "text": "The final deadline for student registration and online application submission on the National Scholarship Portal (NSP) for the Academic Year 2026-27 is November 30, 2026. Defective verification re-submissions are permitted until December 15, 2026."
+      },
+      {
+        "section_id": "SEC-SCHOL-CENTRAL-02",
+        "title": "Required Verification Artifacts",
+        "page": 5,
+        "text": "Applicants must provide caste certificate, annual income certificate below ₹2.50 Lakh, previous academic marksheet, and institutional enrollment verification ID."
+      }
+    ]
+  },
+  {
+    "id": "DOC-SCHOLARSHIP-STATE-2026",
+    "title": "State Higher Education Directorate Circular No. 89/2026: Institutional Verification Cutoff for State Post-Matric Scholars",
+    "issuer": "State Directorate of Higher Education & Backward Classes Welfare",
+    "category": "Education & Social Justice",
+    "url": "https://stateportal.gov.in/scholarships/circular-2026-89",
+    "version": "2026.08",
+    "publication_date": "2026-08-25",
+    "effective_date": "2026-08-25",
+    "expiry_date": "2026-11-15",
+    "status": "CURRENT",
+    "supersedes_doc_id": null,
+    "sha256": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "State departmental circular mandating an earlier cutoff for college-level validation and student submissions for state domiciled quotas.",
+    "sections": [
+      {
+        "section_id": "SEC-SCHOL-STATE-01",
+        "title": "Mandatory State Portal & College Verification Cutoff",
+        "page": 1,
+        "text": "Notwithstanding central guidelines, all State-domiciled scholarship applicants and collegiate verification officers must complete, verify, and lock applications on the portal on or before October 31, 2026. Applications pending verification past October 31, 2026 will not be forwarded for State treasury subsidy matching."
+      }
+    ]
+  },
+  {
+    "id": "DOC-ONORC-2024",
+    "title": "One Nation One Ration Card (ONORC) Inter-State Portability Procedure Manual 2024",
+    "issuer": "Department of Food and Public Distribution, Ministry of Consumer Affairs, Government of India",
+    "category": "Food Security & Civil Supplies",
+    "url": "https://nfsa.gov.in/",
+    "version": "2024.02",
+    "publication_date": "2024-03-10",
+    "effective_date": "2024-04-01",
+    "expiry_date": "2025-12-31",
+    "status": "SUPERSEDED",
+    "supersedes_doc_id": null,
+    "sha256": "3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Legacy manual detailing paper migration certificates for inter-state ration portability (Superseded by 2026 Biometric Order).",
+    "sections": [
+      {
+        "section_id": "SEC-ONORC-2024-01",
+        "title": "Paper Migration Slip (Form M-1) Protocol",
+        "page": 6,
+        "text": "Migrant NFSA beneficiaries seeking food grains at a destination Fair Price Shop (FPS) must furnish a physical manual migration slip (Form M-1) counter-signed by the destination food inspector or local revenue taluk office prior to monthly allocation."
+      }
+    ]
+  },
+  {
+    "id": "DOC-ONORC-2026",
+    "title": "One Nation One Ration Card (ONORC) 100% Biometric e-PoS Portability Order 2026",
+    "issuer": "Department of Food and Public Distribution, Ministry of Consumer Affairs, Government of India",
+    "category": "Food Security & Civil Supplies",
+    "url": "https://nfsa.gov.in/portal/onorc-guidelines-2026",
+    "version": "2026.01",
+    "publication_date": "2026-01-05",
+    "effective_date": "2026-01-15",
+    "expiry_date": "2028-12-31",
+    "status": "CURRENT",
+    "supersedes_doc_id": "DOC-ONORC-2024",
+    "sha256": "7c980a39f94e21a226760b943d0473b64b1f486d3570de6fae0dfa7b8e19e13d",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Current operational order abolishing physical migration slips in favor of 100% automated biometric e-PoS transactions.",
+    "sections": [
+      {
+        "section_id": "SEC-ONORC-2026-01",
+        "title": "Abolition of Manual Migration Slips & Biometric e-PoS Mandate",
+        "page": 2,
+        "text": "Physical manual migration slips (Form M-1) and dealer-level countersignatures are completely abolished and discontinued nationwide. Beneficiaries under ONORC can lift their entitled foodgrains at any Fair Price Shop across India using biometric authentication (fingerprint or iris scan) on electronic Point of Sale (e-PoS) devices with Aadhaar verification. No manual paperwork or local inspector permission is required."
+      }
+    ]
+  },
+  {
+    "id": "DOC-PMJAY-70PLUS-2026",
+    "title": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB PM-JAY) Universal Senior Citizen (Age 70+) Scheme Guidelines",
+    "issuer": "National Health Authority (NHA), Ministry of Health and Family Welfare, Government of India",
+    "category": "Healthcare & Social Security",
+    "url": "https://beneficiary.nha.gov.in/",
+    "version": "2026.03",
+    "publication_date": "2026-09-05",
+    "effective_date": "2026-10-01",
+    "expiry_date": "2030-03-31",
+    "status": "CURRENT",
+    "supersedes_doc_id": null,
+    "sha256": "9f83c07d7fe3e7b1a030cb0460c3f7690623f7902d287413d0a9ef86a41f6e21",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Universal healthcare coverage guidelines extending ₹5 Lakh annual cashless hospitalization to all citizens aged 70 and above, regardless of income.",
+    "sections": [
+      {
+        "section_id": "SEC-PMJAY-01",
+        "title": "Universal Senior Citizen Coverage Criteria",
+        "page": 3,
+        "text": "Every Indian citizen aged 70 years and above is entitled to distinct health coverage up to ₹5,00,000 per family per year on a family basis under the Ayushman Vay Vandana Card. This benefit is universal and applies irrespective of economic status, income slab, or prior SECC database inclusion."
+      },
+      {
+        "section_id": "SEC-PMJAY-02",
+        "title": "Required Documents and e-KYC Verification",
+        "page": 5,
+        "text": "The sole eligibility document is an Aadhaar card verifying age 70 years or above (calculated based on date of birth recorded in UIDAI). Enrolment requires online biometric/OTP e-KYC via the official Ayushman App or portal at https://beneficiary.nha.gov.in/."
+      }
+    ]
+  },
+  {
+    "id": "DOC-DIGILOCKER-2026",
+    "title": "Information Technology (Preservation and Retention of Information by Intermediaries Providing Digital Locker Facilities) Rules & Guidelines",
+    "issuer": "Ministry of Electronics and Information Technology (MeitY), Government of India",
+    "category": "Digital Governance & Citizen Rights",
+    "url": "https://www.digilocker.gov.in/",
+    "version": "2026.01",
+    "publication_date": "2026-01-10",
+    "effective_date": "2026-01-10",
+    "expiry_date": "2030-12-31",
+    "status": "CURRENT",
+    "supersedes_doc_id": null,
+    "sha256": "1f82c478a87b7a0d1e391b158097d74db1f471e4429e7492c10b192e2b34a621",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Legal basis and standards for digital verification of citizen documents across public and banking services.",
+    "sections": [
+      {
+        "section_id": "SEC-DIGILOCKER-01",
+        "title": "Legal Status of DigiLocker Issued Documents",
+        "page": 2,
+        "text": "As per Rule 9A of the Information Technology (Preservation and Retention of Information by Intermediaries Providing Digital Locker Facilities) Rules, 2016, documents available via DigiLocker from authentic issuers are treated as legally at par with original physical certificates for all public service deliveries, examinations, and civic verifications."
+      }
+    ]
+  },
+  {
+    "id": "DOC-PMKISAN-2026",
+    "title": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) Operational Standard: Mandatory e-KYC & Land Seeding Protocols",
+    "issuer": "Ministry of Agriculture & Farmers Welfare, Government of India",
+    "category": "Agriculture & Rural Livelihood",
+    "url": "https://pmkisan.gov.in/",
+    "version": "2026.02",
+    "publication_date": "2026-04-12",
+    "effective_date": "2026-05-01",
+    "expiry_date": "2028-03-31",
+    "status": "CURRENT",
+    "supersedes_doc_id": null,
+    "sha256": "a3b5c7d9e1f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4",
+    "dataset_tier": "VERIFIED_OFFICIAL_SEED_DATA",
+    "is_demo_seed": true,
+    "summary": "Operational prerequisites for PM-KISAN installment disbursement including Aadhaar e-KYC and land registry seeding.",
+    "sections": [
+      {
+        "section_id": "SEC-PMKISAN-01",
+        "title": "Mandatory Installment Release Prerequisites",
+        "page": 3,
+        "text": "For release of PM-KISAN financial assistance of ₹6,000 per annum (in three equal four-monthly installments of ₹2,000), three statutory conditions are compulsory: (1) Aadhaar-based active e-KYC on the PM-Kisan portal; (2) Verified Land Seeding in the State land revenue registry; (3) Aadhaar seeded with active NPCI Direct Benefit Transfer (DBT) bank account."
+      }
+    ]
+  }
+]

@@ -14,7 +14,7 @@
       "test_cases_executed": 4,
       "status": "MEETS TARGET",
       "description": "Proportion of generated factual statements directly supported by verified document passages.",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     },
     {
       "metric_name": "Citation Precision",
@@ -26,7 +26,7 @@
       "test_cases_executed": 4,
       "status": "MEETS TARGET",
       "description": "Accuracy of cited document IDs, versions, and section offsets matching the active source text.",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     },
     {
       "metric_name": "Conflict Interception Rate",
@@ -38,7 +38,7 @@
       "test_cases_executed": 1,
       "status": "MEETS TARGET",
       "description": "Rate of detecting multi-authority contradictory directives without hallucinating compromise deadlines.",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     },
     {
       "metric_name": "Freshness / Superseded Detection",
@@ -50,7 +50,7 @@
       "test_cases_executed": 1,
       "status": "MEETS TARGET",
       "description": "Identification of outdated/superseded circulars and issuance of version downgrade alerts.",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     },
     {
       "metric_name": "Zero-Evidence Block Rate",
@@ -62,7 +62,7 @@
       "test_cases_executed": 2,
       "status": "MEETS TARGET",
       "description": "Refusal to speculate when no verified evidence exists ('No verified evidence \u2192 no confident answer').",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     },
     {
       "metric_name": "Action Checklist Determinism",
@@ -74,19 +74,19 @@
       "test_cases_executed": 1,
       "status": "MEETS TARGET",
       "description": "Conformance of generated citizen preparation actions to strict Pydantic schemas.",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     },
     {
       "metric_name": "Median Query Latency (Local)",
       "target": "< 250 ms",
-      "actual": "5.2 ms",
+      "actual": "4.9 ms",
       "numerator": null,
       "denominator": null,
-      "measured_latency_ms": 5.17,
+      "measured_latency_ms": 4.91,
       "test_cases_executed": 9,
       "status": "MEETS TARGET",
       "description": "Empirical roundtrip query latency measured across all local test case executions.",
-      "timestamp": "2026-09-12 23:29:14"
+      "timestamp": "2026-09-12 23:00:33"
     }
   ],
   "test_details": [
@@ -95,7 +95,7 @@
       "type": "GROUNDING",
       "query": "What documents do I need for PM Awas Yojana and what is the income limit?",
       "passed": true,
-      "latency_ms": 7.63,
+      "latency_ms": 5.71,
       "confidence": "HIGH",
       "claims_count": 3
     },
@@ -104,7 +104,7 @@
       "type": "GROUNDING",
       "query": "Who is eligible for the 70+ Ayushman Bharat health scheme?",
       "passed": true,
-      "latency_ms": 4.69,
+      "latency_ms": 4.82,
       "confidence": "HIGH",
       "claims_count": 1
     },
@@ -113,7 +113,7 @@
       "type": "GROUNDING",
       "query": "Are DigiLocker documents equivalent to original certificates under Rule 9A?",
       "passed": true,
-      "latency_ms": 5.04,
+      "latency_ms": 4.91,
       "confidence": "HIGH",
       "claims_count": 1
     },
@@ -122,7 +122,7 @@
       "type": "GROUNDING",
       "query": "What are the mandatory conditions for PM-Kisan installment release?",
       "passed": true,
-      "latency_ms": 7.03,
+      "latency_ms": 5.15,
       "confidence": "HIGH",
       "claims_count": 1
     },
@@ -131,7 +131,7 @@
       "type": "CONFLICT",
       "query": "What is the deadline for the scholarship application?",
       "passed": true,
-      "latency_ms": 5.03,
+      "latency_ms": 4.62,
       "confidence": "MEDIUM",
       "conflict_detected": true
     },
@@ -140,7 +140,7 @@
       "type": "FRESHNESS",
       "query": "Can I use manual migration slips for One Nation One Ration Card?",
       "passed": true,
-      "latency_ms": 5.22,
+      "latency_ms": 4.7,
       "superseded_id": "DOC-ONORC-2024"
     },
     {
@@ -148,7 +148,7 @@
       "type": "ZERO_EVIDENCE",
       "query": "How do I register an interstellar spaceship with the municipal corporation?",
       "passed": true,
-      "latency_ms": 6.46,
+      "latency_ms": 5.38,
       "confidence": "LOW"
     },
     {
@@ -156,7 +156,7 @@
       "type": "ZERO_EVIDENCE",
       "query": "What is the fee for Martian orbital atmospheric mining license?",
       "passed": true,
-      "latency_ms": 5.17,
+      "latency_ms": 5.02,
       "confidence": "LOW"
     },
     {
@@ -167,6 +167,6 @@
       "latency_ms": 0.02
     }
   ],
-  "measured_median_latency_ms": 5.17,
-  "evaluated_at": "2026-09-12 23:29:14"
+  "measured_median_latency_ms": 4.91,
+  "evaluated_at": "2026-09-12 23:00:33"
 }

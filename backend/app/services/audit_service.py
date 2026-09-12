@@ -32,13 +32,20 @@ class AuditService:
         return hashlib.sha256(payload).hexdigest()
 
     def _load_logs(self):
-        if self.log_file.exists():
+        candidate_paths = [
+            self.log_file,
+            Path(__file__).resolve().parent.parent.parent / "backend" / "knowledge" / "audit_log.json",
+            Path(__file__).resolve().parent.parent / "knowledge" / "audit_log.json",
+            Path("/var/task/backend/knowledge/audit_log.json")
+        ]
+        target_path = next((p for p in candidate_paths if p.exists()), None)
+        if target_path:
             try:
-                with open(self.log_file, "r", encoding="utf-8") as f:
+                with open(target_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     self._memory_logs = [AuditRecord(**record) for record in data]
             except Exception as e:
-                print(f"Error loading audit log: {e}")
+                print(f"Error loading audit log from {target_path}: {e}")
                 self._memory_logs = []
         
         if not self._memory_logs:

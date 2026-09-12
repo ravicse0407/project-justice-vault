@@ -13,15 +13,22 @@ class RetrievalService:
         self.load_documents()
 
     def load_documents(self):
-        if self.sources_file.exists():
+        candidate_paths = [
+            self.sources_file,
+            Path(__file__).resolve().parent.parent.parent / "backend" / "knowledge" / "sources.json",
+            Path(__file__).resolve().parent.parent / "knowledge" / "sources.json",
+            Path("/var/task/backend/knowledge/sources.json")
+        ]
+        target_path = next((p for p in candidate_paths if p.exists()), None)
+        if target_path:
             try:
-                with open(self.sources_file, "r", encoding="utf-8") as f:
+                with open(target_path, "r", encoding="utf-8") as f:
                     raw_docs = json.load(f)
                     for d in raw_docs:
                         doc = DocumentRecord(**d)
                         self.documents[doc.id] = doc
             except Exception as e:
-                print(f"Error loading sources: {e}")
+                print(f"Error loading sources from {target_path}: {e}")
 
     def add_document(self, doc: DocumentRecord):
         self.documents[doc.id] = doc

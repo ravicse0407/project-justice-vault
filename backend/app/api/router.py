@@ -195,11 +195,20 @@ def get_evidence_trace(doc_id: str):
 
 @router.get("/graph")
 def get_rule_graph():
-    graph_path = Path(settings.DATA_DIR) / "rule_graph.json"
-    if graph_path.exists():
+    candidate_paths = [
+        Path(settings.DATA_DIR) / "rule_graph.json",
+        Path(__file__).resolve().parent.parent.parent / "backend" / "knowledge" / "rule_graph.json",
+        Path(__file__).resolve().parent.parent / "knowledge" / "rule_graph.json",
+        Path("/var/task/backend/knowledge/rule_graph.json")
+    ]
+    target_path = next((p for p in candidate_paths if p.exists()), None)
+    if target_path:
         import json
-        with open(graph_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(target_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading rule graph from {target_path}: {e}")
     return {"entities": [], "relationships": []}
 
 @router.post("/action/validate", response_model=ActionValidationResult)
