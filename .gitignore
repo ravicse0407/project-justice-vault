@@ -5,8 +5,8 @@ __pycache__/
 .pytest_cache/
 
 # Build outputs
-frontend/dist/
-dist/
+# dist is committed for instant serverless hosting
+
 
 # Local data & environment
 .env

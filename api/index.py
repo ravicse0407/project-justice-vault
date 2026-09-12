@@ -3,6 +3,8 @@ import sys
 from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 # Top-level FastAPI instance required by Vercel's Python builder
 app = FastAPI(
@@ -50,11 +52,44 @@ except ImportError:
     except Exception as e:
         print(f"Router import error: {e}")
 
-@app.get("/")
-def root():
+@app.get("/api")
+def api_root():
     return {
         "service": "Justice Vault - Evidence-Grounded AI Action Engine",
         "tagline": "No verified evidence -> no confident answer",
         "status": "healthy",
-        "router_loaded": router_loaded
+        "router_loaded": router_loaded,
+        "docs": "/docs",
+        "health": "/api/health"
     }
+
+# Find dist folder for static frontend serving
+dist_candidates = [
+    CURRENT_DIR / "dist",
+    ROOT_DIR / "dist",
+    Path("/var/task/api/dist"),
+    Path("/var/task/dist")
+]
+dist_dir = next((d for d in dist_candidates if (d / "index.html").exists()), None)
+
+if dist_dir:
+    assets_dir = dist_dir / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/")
+    async def serve_root():
+        return FileResponse(dist_dir / "index.html")
+
+    @app.get("/index.html")
+    async def serve_index_file():
+        return FileResponse(dist_dir / "index.html")
+else:
+    @app.get("/")
+    def root():
+        return {
+            "service": "Justice Vault - Evidence-Grounded AI Action Engine",
+            "tagline": "No verified evidence -> no confident answer",
+            "status": "healthy",
+            "router_loaded": router_loaded
+        }
