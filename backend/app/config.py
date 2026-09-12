@@ -15,9 +15,12 @@ class Settings:
     STORAGE_ENCRYPTION_KEY: str = os.getenv("STORAGE_ENCRYPTION_KEY", "justice_vault_aes256_mock_key_32_bytes_lenovo")
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./justice_vault.db")
     DATA_DIR: str = os.getenv("DATA_DIR", str(BASE_DIR / "backend" / "knowledge"))
-    UPLOAD_DIR: str = os.getenv("UPLOAD_DIR", str(BASE_DIR / "backend" / "uploads"))
+    UPLOAD_DIR: str = os.getenv("UPLOAD_DIR", "/tmp/uploads" if os.getenv("VERCEL") else str(BASE_DIR / "backend" / "uploads"))
 
 settings = Settings()
 
-os.makedirs(settings.DATA_DIR, exist_ok=True)
-os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
+try:
+    os.makedirs(settings.DATA_DIR, exist_ok=True)
+    os.makedirs(settings.UPLOAD_DIR, exist_ok=True)
+except OSError:
+    pass

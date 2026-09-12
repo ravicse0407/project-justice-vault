@@ -1,5 +1,28 @@
 [
   {
+    "audit_id": "AUD-1789235112670",
+    "timestamp": "2026-09-12 23:15:12",
+    "user_id": "anonymous_citizen",
+    "role": "citizen",
+    "event_type": "CITIZEN_QUERY_PROCESSED",
+    "query": "Who is eligible for the 70+ Ayushman Bharat health scheme?",
+    "retrieved_source_ids": [
+      "DOC-PMJAY-70PLUS-2026",
+      "DOC-PMJAY-70PLUS-2026"
+    ],
+    "confidence": "HIGH",
+    "conflict_detected": false,
+    "action_generated": true,
+    "external_action_confirmed": false,
+    "previous_hash": "f6e5b50d142542f61c94d9a49ec3066977d38d7868940707c2613b43ed4ded86",
+    "record_hash": "024a9f9ba4a82b0d3d36371292bff146af05b4a69e82810fe8d64ba3585323b2",
+    "details": {
+      "claims_count": 1,
+      "processing_time_ms": 9.15,
+      "language": "en"
+    }
+  },
+  {
     "audit_id": "AUD-1789234522013",
     "timestamp": "2026-09-12 23:05:22",
     "user_id": "anonymous_citizen",
