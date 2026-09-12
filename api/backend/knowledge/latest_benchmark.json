@@ -1,0 +1,172 @@
+{
+  "tests_executed": 9,
+  "tests_passed": 9,
+  "pass_rate": "100.0%",
+  "overall_status": "MEETS TARGET",
+  "metrics": [
+    {
+      "metric_name": "Grounded Claim Rate",
+      "target": "\u2265 95.0%",
+      "actual": "100.0%",
+      "numerator": 6,
+      "denominator": 6,
+      "measured_latency_ms": null,
+      "test_cases_executed": 4,
+      "status": "MEETS TARGET",
+      "description": "Proportion of generated factual statements directly supported by verified document passages.",
+      "timestamp": "2026-09-12 23:29:14"
+    },
+    {
+      "metric_name": "Citation Precision",
+      "target": "\u2265 90.0%",
+      "actual": "100.0%",
+      "numerator": 6,
+      "denominator": 6,
+      "measured_latency_ms": null,
+      "test_cases_executed": 4,
+      "status": "MEETS TARGET",
+      "description": "Accuracy of cited document IDs, versions, and section offsets matching the active source text.",
+      "timestamp": "2026-09-12 23:29:14"
+    },
+    {
+      "metric_name": "Conflict Interception Rate",
+      "target": "100.0%",
+      "actual": "100.0%",
+      "numerator": 1,
+      "denominator": 1,
+      "measured_latency_ms": null,
+      "test_cases_executed": 1,
+      "status": "MEETS TARGET",
+      "description": "Rate of detecting multi-authority contradictory directives without hallucinating compromise deadlines.",
+      "timestamp": "2026-09-12 23:29:14"
+    },
+    {
+      "metric_name": "Freshness / Superseded Detection",
+      "target": "100.0%",
+      "actual": "100.0%",
+      "numerator": 1,
+      "denominator": 1,
+      "measured_latency_ms": null,
+      "test_cases_executed": 1,
+      "status": "MEETS TARGET",
+      "description": "Identification of outdated/superseded circulars and issuance of version downgrade alerts.",
+      "timestamp": "2026-09-12 23:29:14"
+    },
+    {
+      "metric_name": "Zero-Evidence Block Rate",
+      "target": "100.0%",
+      "actual": "100.0%",
+      "numerator": 2,
+      "denominator": 2,
+      "measured_latency_ms": null,
+      "test_cases_executed": 2,
+      "status": "MEETS TARGET",
+      "description": "Refusal to speculate when no verified evidence exists ('No verified evidence \u2192 no confident answer').",
+      "timestamp": "2026-09-12 23:29:14"
+    },
+    {
+      "metric_name": "Action Checklist Determinism",
+      "target": "100.0%",
+      "actual": "100.0%",
+      "numerator": 1,
+      "denominator": 1,
+      "measured_latency_ms": null,
+      "test_cases_executed": 1,
+      "status": "MEETS TARGET",
+      "description": "Conformance of generated citizen preparation actions to strict Pydantic schemas.",
+      "timestamp": "2026-09-12 23:29:14"
+    },
+    {
+      "metric_name": "Median Query Latency (Local)",
+      "target": "< 250 ms",
+      "actual": "5.2 ms",
+      "numerator": null,
+      "denominator": null,
+      "measured_latency_ms": 5.17,
+      "test_cases_executed": 9,
+      "status": "MEETS TARGET",
+      "description": "Empirical roundtrip query latency measured across all local test case executions.",
+      "timestamp": "2026-09-12 23:29:14"
+    }
+  ],
+  "test_details": [
+    {
+      "test_id": "TC-G1",
+      "type": "GROUNDING",
+      "query": "What documents do I need for PM Awas Yojana and what is the income limit?",
+      "passed": true,
+      "latency_ms": 7.63,
+      "confidence": "HIGH",
+      "claims_count": 3
+    },
+    {
+      "test_id": "TC-G2",
+      "type": "GROUNDING",
+      "query": "Who is eligible for the 70+ Ayushman Bharat health scheme?",
+      "passed": true,
+      "latency_ms": 4.69,
+      "confidence": "HIGH",
+      "claims_count": 1
+    },
+    {
+      "test_id": "TC-G3",
+      "type": "GROUNDING",
+      "query": "Are DigiLocker documents equivalent to original certificates under Rule 9A?",
+      "passed": true,
+      "latency_ms": 5.04,
+      "confidence": "HIGH",
+      "claims_count": 1
+    },
+    {
+      "test_id": "TC-G4",
+      "type": "GROUNDING",
+      "query": "What are the mandatory conditions for PM-Kisan installment release?",
+      "passed": true,
+      "latency_ms": 7.03,
+      "confidence": "HIGH",
+      "claims_count": 1
+    },
+    {
+      "test_id": "TC-C1",
+      "type": "CONFLICT",
+      "query": "What is the deadline for the scholarship application?",
+      "passed": true,
+      "latency_ms": 5.03,
+      "confidence": "MEDIUM",
+      "conflict_detected": true
+    },
+    {
+      "test_id": "TC-F1",
+      "type": "FRESHNESS",
+      "query": "Can I use manual migration slips for One Nation One Ration Card?",
+      "passed": true,
+      "latency_ms": 5.22,
+      "superseded_id": "DOC-ONORC-2024"
+    },
+    {
+      "test_id": "TC-Z1",
+      "type": "ZERO_EVIDENCE",
+      "query": "How do I register an interstellar spaceship with the municipal corporation?",
+      "passed": true,
+      "latency_ms": 6.46,
+      "confidence": "LOW"
+    },
+    {
+      "test_id": "TC-Z2",
+      "type": "ZERO_EVIDENCE",
+      "query": "What is the fee for Martian orbital atmospheric mining license?",
+      "passed": true,
+      "latency_ms": 5.17,
+      "confidence": "LOW"
+    },
+    {
+      "test_id": "TC-A1",
+      "type": "ACTION_DETERMINISM",
+      "query": "Action Schema Validation",
+      "passed": true,
+      "latency_ms": 0.02
+    }
+  ],
+  "measured_median_latency_ms": 5.17,
+  "evaluated_at": "2026-09-12 23:29:14"
+}

@@ -1,0 +1,133 @@
+{
+  "entities": [
+    {
+      "id": "SERVICE_PMAY_U",
+      "type": "Service",
+      "name": "Pradhan Mantri Awas Yojana - Urban (PMAY-U 2.0)",
+      "authority": "MoHUA",
+      "portal": "https://pmay-urban.gov.in/"
+    },
+    {
+      "id": "SERVICE_SCHOLARSHIP_POSTMATRIC",
+      "type": "Service",
+      "name": "Post-Matric Scholarship Scheme (SC/ST/OBC)",
+      "authority": "Ministry of Social Justice & Empowerment",
+      "portal": "https://scholarships.gov.in/"
+    },
+    {
+      "id": "SERVICE_ONORC",
+      "type": "Service",
+      "name": "One Nation One Ration Card (ONORC)",
+      "authority": "Department of Food & Public Distribution",
+      "portal": "https://nfsa.gov.in/"
+    },
+    {
+      "id": "SERVICE_PMJAY",
+      "type": "Service",
+      "name": "Ayushman Bharat PM-JAY (70+ Senior Citizen)",
+      "authority": "National Health Authority",
+      "portal": "https://beneficiary.nha.gov.in/"
+    },
+    {
+      "id": "SERVICE_PMKISAN",
+      "type": "Service",
+      "name": "PM Kisan Samman Nidhi",
+      "authority": "Ministry of Agriculture & Farmers Welfare",
+      "portal": "https://pmkisan.gov.in/"
+    },
+    {
+      "id": "DOC_TYPE_AADHAAR",
+      "type": "Document",
+      "name": "Aadhaar Card with Biometric/OTP linkage"
+    },
+    {
+      "id": "DOC_TYPE_INCOME_CERT",
+      "type": "Document",
+      "name": "Revenue Authority Certified Income Certificate"
+    },
+    {
+      "id": "DOC_TYPE_LAND_RECORD",
+      "type": "Document",
+      "name": "Land Title Deed / Patta / Possession Document"
+    },
+    {
+      "id": "DOC_TYPE_AFFIDAVIT_PUCCA",
+      "type": "Document",
+      "name": "Affidavit affirming non-ownership of pucca house anywhere in India"
+    },
+    {
+      "id": "DOC_TYPE_BANK_PASSBOOK",
+      "type": "Document",
+      "name": "Aadhaar-seeded NPCI Active Bank Account Passbook"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "SERVICE_PMAY_U",
+      "relation": "SERVICE_REQUIRES_DOCUMENT",
+      "target": "DOC_TYPE_AADHAAR",
+      "authority_doc_id": "DOC-PMAY-U2-2026",
+      "section": "SEC-PMAY-02"
+    },
+    {
+      "source": "SERVICE_PMAY_U",
+      "relation": "SERVICE_REQUIRES_DOCUMENT",
+      "target": "DOC_TYPE_INCOME_CERT",
+      "authority_doc_id": "DOC-PMAY-U2-2026",
+      "section": "SEC-PMAY-02"
+    },
+    {
+      "source": "SERVICE_PMAY_U",
+      "relation": "SERVICE_REQUIRES_DOCUMENT",
+      "target": "DOC_TYPE_LAND_RECORD",
+      "authority_doc_id": "DOC-PMAY-U2-2026",
+      "section": "SEC-PMAY-02"
+    },
+    {
+      "source": "SERVICE_PMAY_U",
+      "relation": "SERVICE_REQUIRES_DOCUMENT",
+      "target": "DOC_TYPE_AFFIDAVIT_PUCCA",
+      "authority_doc_id": "DOC-PMAY-U2-2026",
+      "section": "SEC-PMAY-02"
+    },
+    {
+      "source": "SERVICE_PMAY_U",
+      "relation": "SERVICE_REQUIRES_DOCUMENT",
+      "target": "DOC_TYPE_BANK_PASSBOOK",
+      "authority_doc_id": "DOC-PMAY-U2-2026",
+      "section": "SEC-PMAY-02"
+    },
+    {
+      "source": "DOC-SCHOLARSHIP-CENTRAL-2026",
+      "relation": "RULE_CONFLICTS",
+      "target": "DOC-SCHOLARSHIP-STATE-2026",
+      "topic": "Scholarship Application & Verification Deadline",
+      "conflict_details": {
+        "source_a": {
+          "doc_id": "DOC-SCHOLARSHIP-CENTRAL-2026",
+          "issuer": "Ministry of Social Justice and Empowerment (Central)",
+          "claim": "National Scholarship Portal student submission deadline is November 30, 2026.",
+          "deadline": "2026-11-30"
+        },
+        "source_b": {
+          "doc_id": "DOC-SCHOLARSHIP-STATE-2026",
+          "issuer": "State Directorate of Higher Education",
+          "claim": "State portal collegiate verification and student submission cutoff is October 31, 2026.",
+          "deadline": "2026-10-31"
+        },
+        "recommended_action": "Verify with your educational institution immediately. State-domiciled applications must adhere to the earlier October 31, 2026 state cutoff to qualify for state-matched subsidies."
+      }
+    },
+    {
+      "source": "DOC-ONORC-2026",
+      "relation": "RULE_SUPERSEDES",
+      "target": "DOC-ONORC-2024",
+      "topic": "Migration Slips Abolition",
+      "details": {
+        "superseded_rule": "Physical Form M-1 manual migration slip required at destination FPS dealer (2024 manual).",
+        "current_rule": "100% automated biometric e-PoS transactions with Aadhaar. Paper slips completely abolished (2026 order).",
+        "notice": "Older 2024 documentation detected. The 2026 National Order has superseded manual migration slips in favor of biometric e-PoS."
+      }
+    }
+  ]
+}
