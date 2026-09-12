@@ -4,14 +4,31 @@ import { useApp } from '../context/AppContext';
 
 export const TrustStats = () => {
   const { t } = useApp();
-  const [docCount, setDocCount] = useState(7);
+  const [docCount, setDocCount] = useState(null);
+  const [groundedRate, setGroundedRate] = useState(null);
+  const [auditChainStatus, setAuditChainStatus] = useState("VERIFYING");
 
   useEffect(() => {
+    // Fetch live system health
     fetch('/api/health')
       .then(res => res.json())
       .then(data => {
-        if (data.documents_indexed) {
+        if (data.documents_indexed !== undefined) {
           setDocCount(data.documents_indexed);
+        }
+        if (data.audit_chain_intact !== undefined) {
+          setAuditChainStatus(data.audit_chain_intact ? "ACTIVE (CHAIN INTACT)" : "TAMPER ALERT");
+        }
+      })
+      .catch(() => {});
+
+    // Fetch live benchmark metrics
+    fetch('/api/benchmark')
+      .then(res => res.json())
+      .then(metrics => {
+        const gm = metrics.find(m => m.metric_name === "Grounded Claim Rate");
+        if (gm && gm.actual) {
+          setGroundedRate(gm.actual);
         }
       })
       .catch(() => {});
@@ -20,30 +37,30 @@ export const TrustStats = () => {
   const stats = [
     {
       icon: ShieldCheck,
-      value: "7 Verified",
+      value: docCount !== null ? `${docCount} Standards` : "Loading...",
       label: t.trustStats.sourcesVerified,
       detail: "GoI Gazette, MoHUA, NHA, MeitY Standards",
       color: "text-emerald-600 bg-emerald-50 border-emerald-200"
     },
     {
       icon: Database,
-      value: `${docCount} Documents`,
+      value: docCount !== null ? `${docCount} Documents` : "Loading...",
       label: t.trustStats.documentsIndexed,
-      detail: "SHA-256 Verified & Passaged",
+      detail: "SHA-256 Fingerprinted & Passaged",
       color: "text-cyan-600 bg-cyan-50 border-cyan-200"
     },
     {
       icon: CheckCircle2,
-      value: "100.0%",
+      value: groundedRate || "Evaluating...",
       label: t.trustStats.claimsGrounded,
-      detail: "Zero Unsupported Speculation Policy",
+      detail: "Empirically Tested Factual Grounding",
       color: "text-teal-600 bg-teal-50 border-teal-200"
     },
     {
       icon: Lock,
-      value: "ACTIVE",
+      value: auditChainStatus,
       label: t.trustStats.safetyStatus,
-      detail: "Zero-Hallucination Confidence Gate",
+      detail: "Hash-Chained Cryptographic Audit Gate",
       color: "text-indigo-600 bg-indigo-50 border-indigo-200"
     }
   ];

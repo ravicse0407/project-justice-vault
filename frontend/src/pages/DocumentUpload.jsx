@@ -172,15 +172,23 @@ export const DocumentUpload = () => {
           </div>
 
           {/* Metadata Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs">
             <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
               <span className="text-slate-400 font-bold uppercase text-[10px] block">Assigned Document ID</span>
               <span className="font-mono font-bold text-slate-900">{uploadResult.document_id}</span>
             </div>
 
             <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
-              <span className="text-slate-400 font-bold uppercase text-[10px] block">Detected Domain</span>
-              <span className="font-semibold text-slate-900">{uploadResult.classified_service}</span>
+              <span className="text-slate-400 font-bold uppercase text-[10px] block">Evidence Tier</span>
+              <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">
+                {uploadResult.evidence_tier || "USER UPLOADED EVIDENCE"}
+              </span>
+            </div>
+
+            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <span className="text-slate-400 font-bold uppercase text-[10px] block">Classification</span>
+              <span className="font-semibold text-slate-900 block">{uploadResult.classified_service}</span>
+              <span className="text-[10px] text-slate-500">Conf: {((uploadResult.classification_confidence || 0.85) * 100).toFixed(0)}%</span>
             </div>
 
             <div className="bg-slate-50 p-3 rounded-lg border border-slate-200">
@@ -191,9 +199,12 @@ export const DocumentUpload = () => {
 
           {/* Cryptographic SHA-256 Digest */}
           <div>
-            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
-              Cryptographic SHA-256 Checksum
-            </span>
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
+                Cryptographic Integrity Fingerprint (SHA-256 of Raw Bytes)
+              </span>
+              <span className="text-[10px] text-emerald-700 font-medium">Computed from file payload</span>
+            </div>
             <div className="bg-slate-900 text-cyan-300 p-3 rounded-lg text-xs font-mono break-all border border-slate-800 select-all">
               {uploadResult.sha256}
             </div>

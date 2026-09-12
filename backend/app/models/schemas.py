@@ -156,12 +156,26 @@ class AuditRecord(BaseModel):
     conflict_detected: bool = False
     action_generated: bool = False
     external_action_confirmed: bool = False
+    previous_hash: Optional[str] = None
+    record_hash: Optional[str] = None
     details: Dict[str, Any] = {}
+
+class AuditVerifyResponse(BaseModel):
+    is_valid: bool
+    verified_blocks: int
+    message: str
+    latest_hash: str
+    verified_at: str
 
 class BenchmarkMetric(BaseModel):
     metric_name: str
     target: str
     actual: str
-    test_set: str
-    status: str
+    numerator: Optional[int] = None
+    denominator: Optional[int] = None
+    measured_latency_ms: Optional[float] = None
+    test_cases_executed: Optional[int] = None
+    status: str  # "MEETS TARGET" or "FAILED"
     description: str
+    timestamp: Optional[str] = None
+

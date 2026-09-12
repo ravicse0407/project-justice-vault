@@ -13,7 +13,8 @@ Public scheme notifications, eligibility guidelines, and administrative circular
 ---
 
 ## ⚡ Solution: Justice Vault
-Justice Vault is an **evidence-grounded public-service intelligence layer** that converts complex official gazette information into verified plain-language guidance, traceable claim attributions, version freshness warnings, cross-source conflict detection, and deterministic action checklists with user-confirmed official portal routing.
+Justice Vault is an **evidence-grounded public-service intelligence layer** that converts complex official gazette information into verified plain-language guidance, traceable claim attributions, version freshness warnings,
+ cross-source conflict detection, and deterministic action checklists with user-confirmed official portal routing.
 
 ### Core Principle:
 > **"No verified evidence → no confident answer."**

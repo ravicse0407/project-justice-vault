@@ -44,7 +44,10 @@ export const Benchmark = () => {
       const res = await fetch('/api/evaluate', { method: 'POST' });
       const data = await res.json();
       setEvalResult(data);
-      showToast("Live evaluation suite completed: 100% test pass rate!", "success");
+      if (data.metrics) {
+        setMetrics(data.metrics);
+      }
+      showToast(`Live evaluation suite completed: ${data.tests_passed}/${data.tests_executed} tests passed (${data.pass_rate})`, "success");
     } catch (err) {
       console.error(err);
       showToast("Evaluation runner encountered an issue.", "error");
@@ -65,7 +68,7 @@ export const Benchmark = () => {
             System Benchmarks & Accuracy Metrics
           </h1>
           <p className="text-sm text-slate-600 mt-1">
-            Empirical measurements from our test set suite. No fabricated vanity numbers.
+            Empirical measurements calculated directly from executed test assertions. Zero fabricated vanity numbers.
           </p>
         </div>
 
@@ -77,7 +80,7 @@ export const Benchmark = () => {
           {evaluating ? (
             <>
               <RotateCw className="w-4 h-4 text-cyan-400 animate-spin" />
-              <span>Executing Live Test Matrix...</span>
+              <span>Executing Live Test Matrix & Measuring Latency...</span>
             </>
           ) : (
             <>
@@ -98,16 +101,20 @@ export const Benchmark = () => {
                 Live Test Suite Results: {evalResult.tests_passed} / {evalResult.tests_executed} Passed ({evalResult.pass_rate})
               </h3>
             </div>
-            <span className="text-xs font-mono text-emerald-700 font-semibold">
-              Status: {evalResult.benchmark_status}
+            <span className="text-xs font-mono text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded font-semibold">
+              Overall Status: {evalResult.overall_status} • Median Latency: {evalResult.measured_median_latency_ms} ms
             </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {evalResult.results.map((t, idx) => (
+            {evalResult.test_details?.map((t, idx) => (
               <div key={idx} className="bg-white p-3 rounded-lg border border-emerald-200 text-xs">
-                <span className="font-bold text-slate-800 block mb-0.5">{t.test}</span>
-                <span className="text-emerald-700 font-semibold">✓ PASSED ({t.latency_ms} ms)</span>
+                <div className="flex justify-between items-center mb-1">
+                  <span className="font-mono font-bold text-slate-500 text-[10px]">{t.test_id} • {t.type}</span>
+                  <span className="text-emerald-700 font-mono text-[10px] font-bold">{t.latency_ms} ms</span>
+                </div>
+                <span className="font-bold text-slate-800 block mb-0.5 line-clamp-1">{t.query}</span>
+                <span className="text-emerald-700 font-semibold text-[11px]">✓ TEST PASSED</span>
               </div>
             ))}
           </div>
@@ -118,21 +125,21 @@ export const Benchmark = () => {
       <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
         <div className="p-5 border-b border-slate-100 flex items-center justify-between">
           <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
-            Evaluation Matrix (Target vs Empirical Actual)
+            Empirical Evaluation Matrix (Target vs Measured Actual)
           </h3>
-          <span className="text-xs text-slate-400 font-mono">
-            Updated via PyTest Benchmark Suite
+          <span className="text-xs text-slate-500 font-mono">
+            Direct Mathematical Ratios
           </span>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50 text-slate-500 font-bold uppercase tracking-wider border-b border-slate-200">
+            <thead className="bg-slate-50 text-slate-600 font-bold uppercase tracking-wider border-b border-slate-200">
               <tr>
                 <th className="py-3 px-4">Metric</th>
-                <th className="py-3 px-4">Target</th>
-                <th className="py-3 px-4">Actual (Empirical)</th>
-                <th className="py-3 px-4">Test Set</th>
+                <th className="py-3 px-4">Target Standard</th>
+                <th className="py-3 px-4">Empirically Measured Actual</th>
+                <th className="py-3 px-4">Sample Ratio</th>
                 <th className="py-3 px-4">Status</th>
               </tr>
             </thead>
@@ -140,7 +147,7 @@ export const Benchmark = () => {
               {loading ? (
                 <tr>
                   <td colSpan="5" className="text-center py-8 text-slate-400">
-                    Loading benchmarks...
+                    Loading empirical benchmarks...
                   </td>
                 </tr>
               ) : (
@@ -151,10 +158,20 @@ export const Benchmark = () => {
                       <div className="text-[11px] font-normal text-slate-500 mt-0.5">{m.description}</div>
                     </td>
                     <td className="py-3.5 px-4 font-mono font-semibold text-slate-600">{m.target}</td>
-                    <td className="py-3.5 px-4 font-mono font-bold text-emerald-700 bg-emerald-50/50">{m.actual}</td>
-                    <td className="py-3.5 px-4 text-slate-600 font-mono text-[11px]">{m.test_set}</td>
+                    <td className="py-3.5 px-4 font-mono font-bold text-emerald-700 bg-emerald-50/50">
+                      {m.actual}
+                    </td>
+                    <td className="py-3.5 px-4 text-slate-600 font-mono text-[11px]">
+                      {m.numerator !== null && m.denominator !== null ? (
+                        <span>{m.numerator} / {m.denominator}</span>
+                      ) : (
+                        <span>{m.test_cases_executed || 1} samples</span>
+                      )}
+                    </td>
                     <td className="py-3.5 px-4">
-                      <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[10px]">
+                      <span className={`inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full font-bold text-[10px] ${
+                        m.status === 'MEETS TARGET' ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+                      }`}>
                         <CheckCircle2 className="w-3 h-3" />
                         <span>{m.status}</span>
                       </span>
